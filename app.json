@@ -1,20 +1,20 @@
 {
-	"name": "squirrel-server",
-	"description": "An update server for Squirrel (Squirrel.Mac / Squirrel.Windows) write in Node.js",
-	"website": "https://tiliq.com",
+	"name": "squirrel-server-electron",
+	"description": "An Node.js Update Server for Electron",
+	"website": "https://github.com/sidneys/squirrel-server",
 	"repository": "https://github.com/sidneys/squirrel-server",
-	"keywords": ["squirrel", "updates", "squirrel.mac", "squirrel.windows"],
+	"keywords": ["squirrel", "electron"],
 	"addons": [
 		"papertrail"
 	],
 	"env": {
 		"GITHUB_TOKEN": {
 			"description": "A personal access token (with `repo` read access only) to fetch download url of the latest release",
-			"value": "ABC123"
+			"value": "46c2f7229f5b431eac6293df786a19f60c07b03c"
 		},
 		"GITHUB_REPO": {
 			"description": "The owner/repo combination where the releases lie",
-			"value": "atom/electron"
+			"value": "electron/electron-quick-start"
 		},
 		"WEBHOOK_FETCH_TIMEOUT": {
 			"description": "Seconds to wait to fetch latest data after a webhook (for releases where assets are uploaded after publishing). Put '0' if your release is published only after uploading all of your assets",
@@ -22,27 +22,27 @@
 		},
 		"LINUX_DIRECT_FILE": {
 			"description": "The filename for Linux file across releases (usually a Zip)",
-			"value": "App-linux-{{arch}}.zip"
+			"value": "electron-quick-start-{{arch}}.deb"
 		},
 		"DARWIN_DIRECT_FILE": {
 			"description": "The filename for Mac file across releases (usually a DMG or Zip)",
-			"value": "App-darwin-x64.dmg"
+			"value": "electron-quick-start.dmg"
 		},
 		"DARWIN_ZIP_FILE": {
 			"description": "The filename for Mac Zip files across releases",
-			"value": "App-darwin-x64.zip"
+			"value": "electron-quick-start-mac.zip"
 		},
 		"WIN32_RELEASES_FILE": {
 			"description": "The filename for the Windows RELEASES file across releases",
-			"value": "{{arch}}-RELEASES"
+			"value": "RELEASES"
 		},
 		"WIN32_NUPKG_FILE": {
 			"description": "The filename for Windows NuPKG files across releases",
-			"value": "{{arch}}-{{filename}}"
+			"value": "electron-quick-start-full.nupkg"
 		},
 		"WIN32_DIRECT_FILE": {
 			"description": "The filename for Windows file across releases (usually an EXE, MSI or Zip)",
-			"value": "{{arch}}-AppSetup.exe"
+			"value": "electron-quick-start-setup.exe"
 		}
 	}
 }
