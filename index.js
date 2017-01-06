@@ -17,6 +17,16 @@ const regexps = {
 	linux: /linux|debian|ubuntu|fedora|centos|redhat/
 };
 
+console.log('GITHUB_TOKEN', process.env['GITHUB_TOKEN']);
+console.log('GITHUB_REPO', process.env['GITHUB_REPO']);
+console.log('WEBHOOK_FETCH_TIMEOUT', process.env['WEBHOOK_FETCH_TIMEOUT']);
+console.log('LINUX_DIRECT_FILE', process.env['LINUX_DIRECT_FILE']);
+console.log('DARWIN_DIRECT_FILE', process.env['DARWIN_DIRECT_FILE']);
+console.log('DARWIN_ZIP_FILE', process.env['DARWIN_ZIP_FILE']);
+console.log('WIN32_RELEASES_FILE', process.env['WIN32_RELEASES_FILE']);
+console.log('WIN32_NUPKG_FILE', process.env['WIN32_NUPKG_FILE']);
+console.log('WIN32_DIRECT_FILE', process.env['WIN32_DIRECT_FILE']);
+
 const archTranslations = {
 	//x64: 'amd64',
 	//ia32: 'x86',
