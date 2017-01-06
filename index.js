@@ -404,6 +404,14 @@ router.post('/webhook', function *handleWebhook() {
 	}
 });
 
+// Force update
+router.post('/refresh', function *refresh() {
+	this.status = 200;
+    yield getAllReleases();
+});
+
+
+
 app.proxy = true;
 
 app.use(body());
@@ -412,3 +420,9 @@ app.use(router.allowedMethods());
 
 app.listen(process.env.PORT || 8000);
 getAllReleases();
+
+// Polling
+let interval = setInterval(function() {
+      getAllReleases();
+      console.log('releases', releases.length);
+}, (60 * 1000) * 3);
