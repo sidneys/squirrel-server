@@ -386,10 +386,6 @@ let timeout;
 router.post('/webhook', function *handleWebhook() {
 	this.status = 200;
 
-	if (this.headers['x-github-event'] !== 'release') {
-		return;
-	}
-
 	if (process.env.WEBHOOK_FETCH_TIMEOUT <= 0) {
 		yield getAllReleases();
 	} else {
