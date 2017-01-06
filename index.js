@@ -405,7 +405,7 @@ router.post('/webhook', function *handleWebhook() {
 });
 
 // Force update
-router.post('/refresh', function *refresh() {
+router.get('/refresh', function *forceRefresh() {
 	this.status = 200;
     yield getAllReleases();
 });
