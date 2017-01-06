@@ -2,7 +2,7 @@
 	"name": "squirrel-server",
 	"description": "An update server for Squirrel (Squirrel.Mac / Squirrel.Windows) write in Node.js",
 	"website": "https://tiliq.com",
-	"repository": "https://github.com/Tiliq/squirrel-server",
+	"repository": "https://github.com/sidneys/squirrel-server",
 	"keywords": ["squirrel", "updates", "squirrel.mac", "squirrel.windows"],
 	"addons": [
 		"papertrail"
